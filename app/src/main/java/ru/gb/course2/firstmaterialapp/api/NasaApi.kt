@@ -4,5 +4,5 @@ import retrofit2.http.GET
 
 interface NasaApi {
     @GET("planetary/apod")
-    suspend fun pictureOfTheDay(): String
+    suspend fun pictureOfTheDay(): PictureOfTheDayResponse
 }
