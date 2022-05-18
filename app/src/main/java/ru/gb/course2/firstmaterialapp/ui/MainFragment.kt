@@ -10,7 +10,15 @@ import ru.gb.course2.firstmaterialapp.domain.NasaRepositoryImpl
 
 class MainFragment : Fragment(R.layout.fragment_main) {
 
-    private val viewMode: MainViewModel by viewModels { MainViewModelFactory(NasaRepositoryImpl()) }
+    private val viewModel: MainViewModel by viewModels { MainViewModelFactory(NasaRepositoryImpl()) }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        if (savedInstanceState == null) {
+            viewModel.requestPictureOfTheDay()
+        }
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
