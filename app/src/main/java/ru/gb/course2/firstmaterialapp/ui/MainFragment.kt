@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.coroutineScope
 import coil.load
-import kotlinx.coroutines.flow.collect
 import ru.gb.course2.firstmaterialapp.R
 import ru.gb.course2.firstmaterialapp.databinding.FragmentMainBinding
 import ru.gb.course2.firstmaterialapp.domain.NasaRepositoryImpl
